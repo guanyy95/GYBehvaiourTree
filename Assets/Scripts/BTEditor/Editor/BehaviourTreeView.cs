@@ -9,7 +9,13 @@ public class BehaviourTreeView : GraphView
     public BehaviourTreeView()
     {
         Insert(0, new GridBackground());
-        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Scripts/BTEditor/BehaviourTreeEditor.uss");
+        
+        this.AddManipulator(new ContentZoomer());
+        this.AddManipulator(new ContentDragger());
+        this.AddManipulator(new SelectionDragger());
+        this.AddManipulator(new RectangleSelector());
+        
+        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Scripts/BTEditor/Editor/BehaviourTreeEditor.uss");
         styleSheets.Add(styleSheet);
     }
 }

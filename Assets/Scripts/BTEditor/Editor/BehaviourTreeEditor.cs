@@ -8,7 +8,7 @@ public class BehaviourTreeEditor : EditorWindow
     private VisualTreeAsset m_VisualTreeAsset = default;
     
     [MenuItem("BehaviorTreeEditor/Editor ...")]
-    public static void ShowExample()
+    public static void OpenWindow()
     {
         BehaviourTreeEditor wnd = GetWindow<BehaviourTreeEditor>();
         wnd.titleContent = new GUIContent("BehaviourTreeEditor");
